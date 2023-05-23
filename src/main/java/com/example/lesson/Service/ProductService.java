@@ -1,11 +1,9 @@
-package com.example.lesson.Dao;
-
+package com.example.lesson.Service;
 import com.example.lesson.Record.ProductRecord;
-import com.example.lesson.Service.ProductService;
 
 import java.util.List;
 
-public interface ProductDao {
+public interface ProductService {
     public List<ProductRecord> findAll();
 
     public ProductRecord findById(int id);
