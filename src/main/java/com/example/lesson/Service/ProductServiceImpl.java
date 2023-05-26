@@ -1,5 +1,6 @@
 package com.example.lesson.Service;
 
+import com.example.lesson.controller.ProductController;
 import com.example.lesson.Dao.PgProductDao;
 import com.example.lesson.Dao.ProductDao;
 import com.example.lesson.Exception.ProductNotFoundException;
