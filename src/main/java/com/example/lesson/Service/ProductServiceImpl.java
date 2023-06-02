@@ -1,6 +1,7 @@
 package com.example.lesson.Service;
 
-import com.example.lesson.controller.ProductController;
+import com.example.lesson.Record.ProductRecord2;
+//import com.example.lesson.controller.ProductController;
 import com.example.lesson.Dao.PgProductDao;
 import com.example.lesson.Dao.ProductDao;
 import com.example.lesson.Exception.ProductNotFoundException;
@@ -30,8 +31,8 @@ public class ProductServiceImpl implements ProductService {
 
     //レコード追加
     @Override
-    public int insert(ProductRecord productrecord){
-        return productDao.insert(productrecord);
+    public int insert(ProductRecord2 productRecord){
+        return productDao.insert(productRecord);
     }
 
     //レコードの更新

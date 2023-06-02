@@ -1,6 +1,7 @@
 package com.example.lesson;
 
 import com.example.lesson.Record.ProductRecord;
+import com.example.lesson.Record.ProductRecord2;
 import com.example.lesson.Service.ProductService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,7 +26,7 @@ public class LessonApplication {
 //		System.out.println(product);
 
 		//レコード追加
-//		var insert = new ProductRecord(4,"ボールペン",300);
+//		var insert = new ProductRecord2("ボールペン",300);
 //		int result = productService.insert(insert);
 //		System.out.println(result);
 

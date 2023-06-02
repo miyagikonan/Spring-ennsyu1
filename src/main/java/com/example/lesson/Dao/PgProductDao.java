@@ -2,6 +2,7 @@ package com.example.lesson.Dao;
 
 import com.example.lesson.Exception.ProductNotFoundException;
 import com.example.lesson.Record.ProductRecord;
+import com.example.lesson.Record.ProductRecord2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.DataClassRowMapper;
@@ -44,14 +45,14 @@ public class PgProductDao implements ProductDao {
 
     //レコード追加
     @Override
-    public int insert(ProductRecord productrecord) {
+    public int insert(ProductRecord2 productRecord) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
-        parameterSource.addValue("id",productrecord.id());
-        parameterSource.addValue("name",productrecord.name());
-        parameterSource.addValue("price",productrecord.price());
+//        parameterSource.addValue("id",productrecord.id());
+        parameterSource.addValue("name",productRecord.name());
+        parameterSource.addValue("price",productRecord.price());
         try {
             int insert = 0;
-            insert = jdbcTemplate.update("INSERT INTO products2 VALUES (:id, :name, :price)" , parameterSource);
+            insert = jdbcTemplate.update("INSERT INTO products2 (name, price) VALUES (:name, :price)" , parameterSource);
             return insert;
         } catch (Exception e) {
             System.out.println("インサートできませんでした");

@@ -6,8 +6,16 @@
 </head>
 <body>
 <h2>商品詳細</h2>
-<span>id：</span><span th:text="${product.id}"></span><br>
-<span>商品名:</span><span th:text="${product.name}"></span><br>
-<span>値段:</span><span th:text="${product.price}"></span>
+<form th:action="@{/update/{id}(id=${product.id})}" method="GET" >
+<!--<a th:href="@{/update/{id}(id=${product.id})}" th:text="${product.id}"></a>-->
+<span>id：</span><span th:text="${product.id}" ></span><br>
+<span>商品名:</span><span th:text="${product.name}" ></span><br>
+<span>値段:</span><span th:text="${product.price}" ></span><br>
+
+
+    <button type="submit">修正</button>
+    <button type="submit">削除</button>
+</form>
+
 </body>
 </html>
